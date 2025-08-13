@@ -30,6 +30,7 @@ describe('parseDate', () => {
       lhour: '16',
       minute: '35',
       second: '12',
+      fractionalSecond: '345',
       weekday: 'Monday',
     });
   });
@@ -46,6 +47,7 @@ describe('parseDate', () => {
       lhour: '11',
       minute: '35',
       second: '12',
+      fractionalSecond: '345',
       weekday: 'Monday',
     });
   });
@@ -62,6 +64,7 @@ describe('parseDate', () => {
       lhour: '16',
       minute: '35',
       second: '12',
+      fractionalSecond: '345',
       weekday: 'lundi',
     });
   });

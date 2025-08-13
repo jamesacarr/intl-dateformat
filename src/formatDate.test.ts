@@ -12,6 +12,7 @@ const TOKENS: DateParts = {
   lhour: '16',
   minute: '35',
   second: '12',
+  fractionalSecond: '345',
   weekday: 'Monday',
 };
 
@@ -98,6 +99,11 @@ describe('formatDate', () => {
   test('formats ss', () => {
     const formatted = formatDate({}, 'ss', TOKENS, TEST_DATE);
     expect(formatted).toEqual('12');
+  });
+
+  test('formats SSS', () => {
+    const formatted = formatDate({}, 'SSS', TOKENS, TEST_DATE);
+    expect(formatted).toEqual('345');
   });
 
   test('formats literal string', () => {

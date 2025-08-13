@@ -26,12 +26,12 @@ describe('createDateFormatter', () => {
 
   test('custom formatter', () => {
     const customFormatters: CustomFormatters = {
-      SSS: (_, date) => date.getTime().toString().slice(-3),
+      SS: (_, date) => date.getTime().toString().slice(-3, -1),
     };
 
     const formatter = createDateFormatter(customFormatters);
-    const formatted = formatter(TEST_DATE, 'SSS');
+    const formatted = formatter(TEST_DATE, 'SS');
 
-    expect(formatted).toEqual('345');
+    expect(formatted).toEqual('34');
   });
 });

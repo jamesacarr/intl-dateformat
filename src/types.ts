@@ -8,7 +8,8 @@ export type DatePartName =
   | 'hour'
   | 'lhour'
   | 'minute'
-  | 'second';
+  | 'second'
+  | 'fractionalSecond';
 
 export type Token = { type: DatePartName; value: string };
 export type DateParts = Record<DatePartName, string>;
@@ -29,7 +30,8 @@ export type FormatterMask =
   | 'HH'
   | 'hh'
   | 'mm'
-  | 'ss';
+  | 'ss'
+  | 'SSS';
 
 export type Formatter = (tokens: DateParts, date: Date) => string;
 

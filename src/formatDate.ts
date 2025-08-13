@@ -22,6 +22,7 @@ const formatters: Formatters = {
   hh: parts => parts.hour,
   mm: parts => parts.minute,
   ss: parts => parts.second,
+  SSS: parts => parts.fractionalSecond,
 };
 
 const createCustomPattern = (customFormatters: CustomFormatters) =>
