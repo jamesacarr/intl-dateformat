@@ -8,13 +8,12 @@ export type DatePartName =
   | 'hour'
   | 'lhour'
   | 'minute'
-  | 'second'
+  | 'second';
 
-export type DateParts = { [k in DatePartName]: string }
+export type Token = { type: DatePartName; value: string };
+export type DateParts = Record<DatePartName, string>;
 
-export type Token = { type: DatePartName | 'literal'; value: string }
-
-export type Parser = (date: Date) => DateParts
+export type Parser = (date: Date) => DateParts;
 
 export type FormatterMask =
   | 'YYYY'
@@ -30,17 +29,21 @@ export type FormatterMask =
   | 'HH'
   | 'hh'
   | 'mm'
-  | 'ss'
+  | 'ss';
 
-export type Formatter = (tokens: DateParts, date: Date) => string
+export type Formatter = (tokens: DateParts, date: Date) => string;
 
-export type Formatters = { [k in FormatterMask]: Formatter }
+export type Formatters = { [k in FormatterMask]: Formatter };
 
-export type CustomFormatters = { [k: string]: Formatter }
+export type CustomFormatters = { [k: string]: Formatter };
 
-export type FormatFunction = (date: Date, format: string, options?: FormatOptions) => string
+export type FormatFunction = (
+  date: Date,
+  format: string,
+  options?: FormatOptions,
+) => string;
 
 export type FormatOptions = {
-  locale?: string
-  timezone?: string
-}
+  locale?: string;
+  timezone?: string;
+};
