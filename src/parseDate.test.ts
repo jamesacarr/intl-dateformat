@@ -31,6 +31,7 @@ describe('parseDate', () => {
       minute: '35',
       second: '12',
       fractionalSecond: '345',
+      timeZoneName: 'GMT',
       weekday: 'Monday',
     });
   });
@@ -48,6 +49,7 @@ describe('parseDate', () => {
       minute: '35',
       second: '12',
       fractionalSecond: '345',
+      timeZoneName: 'GMT-05:00',
       weekday: 'Monday',
     });
   });
@@ -65,6 +67,7 @@ describe('parseDate', () => {
       minute: '35',
       second: '12',
       fractionalSecond: '345',
+      timeZoneName: 'UTC',
       weekday: 'lundi',
     });
   });

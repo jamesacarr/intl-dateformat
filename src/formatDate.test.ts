@@ -13,6 +13,7 @@ const TOKENS: DateParts = {
   minute: '35',
   second: '12',
   fractionalSecond: '345',
+  timeZoneName: 'GMT-05:00',
   weekday: 'Monday',
 };
 
@@ -104,6 +105,21 @@ describe('formatDate', () => {
   test('formats SSS', () => {
     const formatted = formatDate({}, 'SSS', TOKENS, TEST_DATE);
     expect(formatted).toEqual('345');
+  });
+
+  test('formats XXX', () => {
+    const formatted = formatDate({}, 'XXX', TOKENS, TEST_DATE);
+    expect(formatted).toEqual('-05:00');
+  });
+
+  test('formats XXX in GMT', () => {
+    const formatted = formatDate(
+      {},
+      'XXX',
+      { ...TOKENS, timeZoneName: 'GMT' },
+      TEST_DATE,
+    );
+    expect(formatted).toEqual('Z');
   });
 
   test('formats literal string', () => {

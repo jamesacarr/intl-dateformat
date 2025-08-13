@@ -24,6 +24,15 @@ describe('createDateFormatter', () => {
     expect(formatted).toEqual('2025-02-17');
   });
 
+  test('vanilla formatter with timezone', () => {
+    const formatter = createDateFormatter({});
+    const formatted = formatter(TEST_DATE, 'YYYY-MM-DDTHH:mm:ssXXX', {
+      timezone: 'America/New_York',
+    });
+
+    expect(formatted).toEqual('2025-02-17T11:35:12-05:00');
+  });
+
   test('custom formatter', () => {
     const customFormatters: CustomFormatters = {
       SS: (_, date) => date.getTime().toString().slice(-3, -1),

@@ -23,6 +23,7 @@ const formatters: Formatters = {
   mm: parts => parts.minute,
   ss: parts => parts.second,
   SSS: parts => parts.fractionalSecond,
+  XXX: parts => parts.timeZoneName.slice(3) || 'Z',
 };
 
 const createCustomPattern = (customFormatters: CustomFormatters) =>
