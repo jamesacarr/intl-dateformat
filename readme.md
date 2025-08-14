@@ -5,7 +5,10 @@
 <h4 align="center">Format a date using Intl.DateTimeFormat goodness.</h4>
 
 <p align="center">
-  <img src="https://flat.badgen.net/badgesize/gzip/https://unpkg.com/intl-dateformat@latest/lib/index.js" />
+  <img alt="GitHub Checks" src="https://img.shields.io/github/check-runs/zapier/intl-dateformat/master">
+  <a href="https://www.npmjs.com/package/intl-dateformat">
+    <img alt="NPM Version" src="https://img.shields.io/npm/v/intl-dateformat">
+  </a>
 </p>
 
 <p align="center">
@@ -20,13 +23,18 @@
 ## Features
 
 - ✌ **Small**: As it directly leverages `Intl.DateTimeFormat`, there is no need to bundle additional locales or a timezones database. It's already in your Browser!
-- 👌**Simple**: It supports a subset of ISO 8601 formats, discarding very rarely used date parts.
+- 👌 **Simple**: It supports a subset of ISO 8601 formats, discarding very rarely used date parts.
 - 🤟 **Extensible**: That said, if you want to customize things you can pass [custom formatters](#custom-formatters).
 
 ## Installation
 
 ```js
+// NPM
 $ npm install intl-dateformat
+// Yarn
+$ yarn add intl-dateformat
+// PNPM
+$ pnpm add intl-dateformat
 ```
 
 ## Example
